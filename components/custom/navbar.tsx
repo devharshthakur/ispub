@@ -52,7 +52,7 @@ export function Navbar() {
             asChild
             className="flex items-center gap-2 rounded-md border-2 border-black p-5 transition-colors dark:border-white"
           >
-            <a href="https://github.com/devahrsthakur/npm-package-checker">
+            <a href="https://github.com/devharshthakur/npm-package-checker">
               <FaGithub size={18} />
               <span>Repo</span>
             </a>
