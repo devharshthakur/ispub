@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ispub.fun">
-    <img src="/logo.jpeg" alt="NPM Package Checker Logo" width="120" height="120">
+    <img src="/public/logo.jpeg" alt="NPM Package Checker Logo" width="120" height="120">
   </a>
 </p>
 
@@ -37,7 +37,7 @@ Finding the perfect, available name for your next Node.js package can be challen
 ## 🖥️ Screenshots
 
 <p align="center">
-  <img src="/screenshot.png" alt="NPM Package Checker Screenshot">
+  <img src="/public/screenshot.png" alt="NPM Package Checker Screenshot">
 </p>
 
 ## 🛠️ Tech Stack
