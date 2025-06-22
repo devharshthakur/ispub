@@ -1,66 +1,53 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaEnvelope, FaHome } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import Link from "next/link";
 
 export function Navbar() {
   return (
-    <header className="bg-background/80 sticky top-0 z-10 border-b backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="flex items-center space-x-6">
+    <nav className="bg-background/80 backdrop-blur-sm">
+      <div className="mx-3 flex items-center justify-between p-4">
+        <div className="flex items-center">
           <Button
             variant="outline"
+            size="lg"
             asChild
-            className="hover:bg-muted flex items-center gap-2 rounded-md border-2 p-5 transition-colors dark:border-white"
-          >
-            <Link href="/">
-              <FaHome size={18} className="text-primary" />
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            asChild
-            className="hover:bg-muted flex items-center gap-2 rounded-md border-2 p-5 transition-colors dark:border-white"
+            className="rounded-md border-3 border-neutral-500 transition-colors"
           >
             <Link href="https://github.com/devharshthakur">
-              <FaGithub size={18} className="text-primary" />
+              <FaGithub className="text-primary" />
               <span>@devharshthakur</span>
             </Link>
           </Button>
-
-          <Link
-            href="/contact"
-            className="hover:bg-muted flex items-center gap-2 rounded-md border-2 border-dashed border-black px-3 py-2 transition-colors dark:border-white"
-          >
-            <FaEnvelope size={16} className="text-primary" />
-            <span>Contact Me</span>
-          </Link>
         </div>
 
         <div className="flex items-center space-x-6">
           <Button
+            size="lg"
             asChild
-            className="rounded-md border-2 border-black p-5 transition-colors dark:border-white"
+            className="rounded-md border-3 border-neutral-500"
+            variant="outline"
           >
-            <Link href="/about">About Me</Link>
+            <Link href="/about">About</Link>
           </Button>
 
           <Button
             variant="outline"
+            size="lg"
             asChild
-            className="flex items-center gap-2 rounded-md border-2 border-black p-5 transition-colors dark:border-white"
+            className="rounded-md border-3 border-neutral-500 transition-colors"
           >
             <a href="https://github.com/devharshthakur/npm-package-checker">
-              <FaGithub size={18} />
+              <FaGithub />
               <span>Repo</span>
             </a>
           </Button>
 
-          <ThemeSwitcher />
+          <ThemeSwitcher className="border-3 border-neutral-500" />
         </div>
       </div>
-    </header>
+    </nav>
   );
 }

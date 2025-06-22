@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/custom/navbar";
-import { BackButton } from "@/components/custom/back-button";
+import type { Metadata } from "next";
+import "./globals.css";
 
-const jetbrains_mono = JetBrains_Mono({
+const geist_mono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
   weight: "500",
@@ -23,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jetbrains_mono.variable} antialiased`}>
+      <body className={`${geist_mono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -31,10 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>
-            <BackButton />
-            {children}
-          </main>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

@@ -40,7 +40,7 @@ export function ResultMessage({ packageName, isAvailable, error }: ResultMessage
   return (
     <div
       className={cn(
-        "animate-fadeIn overflow-hidden rounded-xl shadow-md transition-all",
+        "animate-fadeIn mx-auto max-w-lg overflow-hidden rounded-xl shadow-md transition-all",
         isAvailable
           ? "border-2 border-green-200 dark:border-green-800"
           : "border-2 border-red-200 dark:border-red-800"
@@ -97,9 +97,9 @@ export function ResultMessage({ packageName, isAvailable, error }: ResultMessage
       </div>
 
       {/* Content */}
-      <div className="bg-card p-4">
+      <div className="bg-card p-5">
         {isAvailable ? (
-          <div className="space-y-3">
+          <div className="space-y-2">
             <p className="font-medium text-green-700 dark:text-green-400">
               Great news! This package name is available for publishing.
             </p>
@@ -113,14 +113,9 @@ export function ResultMessage({ packageName, isAvailable, error }: ResultMessage
                 <span>No naming conflicts with existing packages</span>
               </div>
             </div>
-            <div className="pt-2">
-              <code className="bg-muted block rounded p-2 font-mono text-sm">
-                npm publish --access=public
-              </code>
-            </div>
           </div>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-2">
             <p className="font-medium text-red-700 dark:text-red-400">
               This package name is already taken.
             </p>
@@ -141,9 +136,9 @@ export function ResultMessage({ packageName, isAvailable, error }: ResultMessage
                 rel="noopener noreferrer"
                 className="bg-muted hover:bg-muted/80 inline-flex items-center gap-1 rounded p-2 text-sm font-medium transition-colors"
               >
-                <SiNpm className="text-primary" />
+                <SiNpm className="text-primary mr-1" />
                 <span>View package on npmjs.com</span>
-                <ExternalLink size={14} />
+                <ExternalLink size={14} className="ml-1" />
               </a>
             </div>
           </div>
